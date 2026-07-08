@@ -433,29 +433,11 @@ footer p {
 
 
 /* ============================= */
-/* Shared Section Width */
-/* ============================= */
-
-:root {
-  --section-width: 90%;
-  --section-max-width: 1550px;
-}
-
-/* Make Skills and Projects use the same visual width */
-#experience .experience-details-container,
-#projects .projects-grid-custom {
-  width: var(--section-width);
-  max-width: var(--section-max-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============================= */
-/* Fix Projects Section Width */
+/* Clean Responsive Projects Grid */
 /* ============================= */
 
 #projects {
-  margin: 0 3.5rem !important;
+  margin: 0 6rem !important;
   padding-top: 7rem;
   padding-bottom: 5rem;
 }
@@ -464,29 +446,35 @@ footer p {
   margin-bottom: 3rem;
 }
 
+/* Desktop: 3 cards per row */
 .projects-grid-custom {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1300px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
-  justify-items: center;
+
+  align-items: stretch;
 }
 
-/* Project card */
+/* Card */
 .project-card-custom {
   width: 100%;
-  max-width: 395px;
-  min-height: 530px;
-  padding: 1.35rem;
-  border-radius: 1.8rem;
+  min-width: 0;
+  min-height: 490px;
+
+  padding: 1.15rem;
+  border-radius: 1.7rem;
   background: white;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  box-sizing: border-box;
+  overflow: hidden;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -496,120 +484,129 @@ footer p {
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* Image */
 .project-card-custom .article-container {
   width: 100%;
   display: block;
+  overflow: hidden;
+  border-radius: 1.3rem;
 }
 
 .project-card-custom .project-img {
   width: 100%;
-  height: 220px;
+  height: 205px;
   object-fit: cover;
-  border-radius: 1.4rem;
+  border-radius: 1.3rem;
   display: block;
 }
 
+/* Title */
 .project-card-custom .project-title {
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.15rem;
+  line-height: 1.2;
   text-align: center;
-  margin: 0.9rem 0 0.45rem;
+  margin: 0.65rem 0 0.25rem;
 }
 
+/* Description */
 .project-description {
-  font-size: 0.86rem;
-  line-height: 1.45;
+  font-size: 0.82rem;
+  line-height: 1.35;
   color: rgb(85, 85, 85);
   text-align: center;
-  margin: 0.3rem auto 0.85rem;
-  max-width: 95%;
+  margin: 0.15rem auto 0.6rem;
+  max-width: 94%;
 }
 
+/* Tech stack */
 .project-tech-stack {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.9rem;
+  gap: 0.35rem;
+  margin-bottom: 0.7rem;
 }
 
 .project-tech-stack span {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  padding: 0.25rem 0.58rem;
+  padding: 0.22rem 0.5rem;
   border-radius: 999px;
   border: 1px solid rgb(190, 190, 190);
   color: rgb(60, 60, 60);
   background-color: white;
+  white-space: nowrap;
 }
 
+/* Buttons */
 .project-card-custom .btn-container {
-  gap: 0.7rem;
+  gap: 0.55rem;
   margin-top: 0;
 }
 
 .project-card-custom .project-btn {
-  padding: 0.65rem 0.8rem;
-  font-size: 0.82rem;
-  min-width: 120px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.78rem;
+  min-width: 110px;
 }
 
-/* Responsive */
-@media screen and (max-width: 1200px) {
+/* ============================= */
+/* Responsive Breakpoints */
+/* ============================= */
+
+/* Smaller desktop / laptop: 2 cards */
+@media screen and (max-width: 1150px) {
   #projects {
-    margin: 0 3rem !important;
+    margin: 0 4rem !important;
   }
 
   .projects-grid-custom {
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    max-width: 900px;
-    gap: 2.2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Tablet / mobile: 1 card */
+@media screen and (max-width: 760px) {
   #projects {
-    margin: 0 1.5rem !important;
+    margin: 0 2rem !important;
     padding-top: 5rem;
   }
 
   .projects-grid-custom {
     grid-template-columns: 1fr;
-    max-width: 430px;
-    gap: 2rem;
+    gap: 1.8rem;
   }
 
   .project-card-custom {
-    max-width: 100%;
-    min-height: 510px;
+    min-height: auto;
   }
 }
 
+/* Small mobile */
 @media screen and (max-width: 480px) {
   #projects {
     margin: 0 1rem !important;
   }
 
   .project-card-custom {
-    min-height: auto;
-    padding: 1.15rem;
+    padding: 1rem;
   }
 
   .project-card-custom .project-img {
-    height: 200px;
+    height: 190px;
   }
 
   .project-card-custom .project-title {
-    font-size: 1.15rem;
+    font-size: 1.08rem;
   }
 
   .project-description {
-    font-size: 0.84rem;
+    font-size: 0.8rem;
   }
 
   .project-card-custom .btn-container {
     flex-direction: column;
-    gap: 0.6rem;
   }
 
   .project-card-custom .project-btn {
