@@ -433,48 +433,50 @@ footer p {
 
 
 /* ============================= */
-/* Final Responsive Project Layout */
+/* Compact 2-Column Project Cards */
 /* ============================= */
 
-/* Reset old section behavior for Projects */
 #projects {
   width: 100%;
-  max-width: none;
   margin: 0 auto !important;
-  padding: 6rem clamp(1rem, 4vw, 4rem) 5rem;
-  height: auto;
-  min-height: auto;
+  padding: 6rem 2rem 5rem;
   box-sizing: border-box;
 }
 
 #projects .title {
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.5rem;
 }
 
-/* Main project list container */
+/* 2 cards per row, but narrower and centered */
 .projects-list-custom {
-  width: min(100%, 1500px);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-/* Main project card */
-.project-row-card {
   width: 100%;
-  min-height: 165px;
-  padding: 1rem 1.15rem;
-  border-radius: 0.7rem;
-  background: white;
-  border: 1px solid rgb(225, 225, 225);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.055);
+  max-width: 1100px;
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 300px 1fr 345px;
-  align-items: center;
-  gap: 1.4rem;
+  grid-template-columns: repeat(2, minmax(360px, 500px));
+  justify-content: center;
+  gap: 1.5rem;
+}
 
+/* Card */
+.project-row-card {
+  width: 100%;
+  max-width: 500px;
+  min-height: 455px;
+
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.75rem;
+  background: white;
+  border: 1px solid rgb(225, 225, 225);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
   box-sizing: border-box;
   overflow: hidden;
 
@@ -483,35 +485,44 @@ footer p {
 
 .project-row-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
 }
 
-/* Image: full image, not cropped */
+/* Image: smaller and centered */
 .project-row-img {
   width: 100%;
-  height: 145px;
-  object-fit: cover;
+  max-width: 340px;
+  height: 165px;
+
+  object-fit: contain;
   object-position: center;
+
   border-radius: 0.55rem;
-  display: block;
   background: #f7f7f7;
+  display: block;
+  margin: 0 auto 0.8rem;
 }
 
-/* Middle content */
+/* Main content */
 .project-row-main {
-  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Number + title centered */
 .project-title-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .project-number {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 0.45rem;
   background: var(--project-accent);
   color: white;
@@ -520,42 +531,49 @@ footer p {
   align-items: center;
   justify-content: center;
 
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .project-title-row h2 {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   line-height: 1.2;
   color: black;
+  text-align: left;
 }
 
+/* Description centered */
 .project-row-main p {
-  font-size: 0.92rem;
-  line-height: 1.45;
+  max-width: 420px;
+  font-size: 0.85rem;
+  line-height: 1.4;
   color: rgb(65, 65, 65);
-  max-width: 620px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* Right side */
+/* Right side becomes centered bottom content */
 .project-row-side {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  min-width: 0;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.9rem;
 }
 
+/* Tech stack centered */
 .project-tech-stack-row {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.45rem;
 }
 
 .project-tech-stack-row span {
-  font-size: 0.82rem;
-  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.65rem;
   border-radius: 999px;
   border: 1px solid rgb(210, 210, 210);
   color: rgb(70, 70, 70);
@@ -563,22 +581,28 @@ footer p {
   white-space: nowrap;
 }
 
+/* Buttons centered and not too wide */
 .project-row-buttons {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.65rem;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
 }
 
 .project-row-buttons button {
-  min-width: 145px;
-  padding: 0.65rem 0.85rem;
+  min-width: 135px;
+  max-width: 160px;
+  padding: 0.6rem 0.8rem;
+
   border-radius: 0.45rem;
   border: 1.4px solid rgb(200, 200, 200);
   background: white;
   color: black;
-  font-size: 0.85rem;
+
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
+
   transition: all 0.25s ease;
 }
 
@@ -589,142 +613,46 @@ footer p {
 }
 
 /* ============================= */
-/* iPad / Small Laptop */
+/* Tablet */
 /* ============================= */
 
-@media screen and (max-width: 1150px) {
-  #projects {
-    padding-left: clamp(1rem, 3vw, 2rem);
-    padding-right: clamp(1rem, 3vw, 2rem);
-  }
-
+@media screen and (max-width: 1050px) {
   .projects-list-custom {
-    width: min(100%, 900px);
+    grid-template-columns: 1fr;
+    max-width: 520px;
   }
 
   .project-row-card {
-    grid-template-columns: 260px 1fr;
-    gap: 1.2rem;
-    padding: 1rem;
-  }
-
-  .project-row-img {
-    height: 145px;
-  }
-
-  .project-row-side {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .project-tech-stack-row {
-    justify-content: flex-start;
-  }
-
-  .project-row-buttons {
-    justify-content: flex-end;
+    max-width: 520px;
   }
 }
 
 /* ============================= */
-/* iPhone / Small Tablet */
+/* Phone */
 /* ============================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   #projects {
     padding: 5rem 1rem 4rem;
   }
 
   .projects-list-custom {
-    width: 100%;
     max-width: 430px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
   }
 
   .project-row-card {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    min-height: auto;
     padding: 1rem;
-    text-align: left;
   }
 
   .project-row-img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-height: none;
     aspect-ratio: 16 / 9;
-    object-fit: contain;
   }
 
   .project-title-row {
-    gap: 0.85rem;
-    margin-bottom: 0.65rem;
-  }
-
-  .project-number {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-  }
-
-  .project-title-row h2 {
-    font-size: 1.15rem;
-  }
-
-  .project-row-main p {
-    font-size: 0.9rem;
-    line-height: 1.45;
-  }
-
-  .project-row-side {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.85rem;
-  }
-
-  .project-tech-stack-row {
-    justify-content: flex-start;
-    gap: 0.5rem;
-  }
-
-  .project-tech-stack-row span {
-    font-size: 0.78rem;
-    padding: 0.32rem 0.7rem;
-  }
-
-  .project-row-buttons {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .project-row-buttons button {
-    width: 100%;
-  }
-}
-
-/* ============================= */
-/* Very Small Phones */
-/* ============================= */
-
-@media screen and (max-width: 420px) {
-  #projects {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .projects-list-custom {
-    max-width: 100%;
-  }
-
-  .project-row-card {
-    border-radius: 0.65rem;
-    padding: 0.9rem;
+    align-items: center;
   }
 
   .project-title-row h2 {
@@ -732,6 +660,15 @@ footer p {
   }
 
   .project-row-main p {
-    font-size: 0.85rem;
+    font-size: 0.84rem;
+  }
+
+  .project-row-buttons {
+    flex-direction: column;
+  }
+
+  .project-row-buttons button {
+    width: 100%;
+    max-width: none;
   }
 }
