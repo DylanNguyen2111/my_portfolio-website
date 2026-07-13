@@ -8,6 +8,7 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 
 <body>
@@ -45,20 +46,16 @@
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Dylan Nguyen</h1>
-      <p class="section__text__p2">Data Analyst | Product Analytics | AI-Powered Analytics Tools</p>
+      <p class="section__text__p2">Data Analyst | SQL, Python, Power BI | Product, Growth & Commercial Analytics</p>
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
           Download CV
         </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+        <button class="btn btn-color-1" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Info</button>
       </div>
       <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='www.linkedin.com/in/DylanNguyenK'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/DylanNguyen2111'" />
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/dylannguyenk/', '_blank')" />
+        <img src="./assets/github.png" alt="My GitHub profile" class="icon" onclick="window.open('https://github.com/DylanNguyen2111', '_blank')" />
       </div>
     </div>
   </section>
@@ -87,19 +84,18 @@
         </div>
         <div class="text-container">
           <p>
-            I am a data analytics professional focused on turning business data into clear,
-            actionable insights. My work combines SQL, Python, Power BI, Excel, and AI-powered
-            analytics tools to help teams understand performance, identify opportunities,
-            and make faster decisions.
+            Data Analyst with 2 years of experience in commercial and growth analytics, including APAC revenue reporting, 
+            sales funnel analysis, forecasting, KPI monitoring, and dashboard automation. Proficient in SQL, Python, Power BI, 
+            Excel, and Salesforce/Oracle data workflows.
             <br /><br />
-            I am building a portfolio around product analytics, forecasting, SQL case studies,
-            and AI-assisted analytics tools that reflect the type of work performed by data
-            teams in companies like Grab, Shopee, TikTok, and other data-driven organizations.
+            I have supported APAC revenue performance through dashboards across bookings, backlog, revenue trends, funnel health, 
+            and forecast tracking. My work includes root-cause analysis on a $2.26M subscription revenue gap and translating commercial data 
+            into clear actions for Sales and Finance stakeholders.
           </p>
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    <a href="#experience" class="arrow-link" aria-label="Go to Experience section"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
   </section>
   <section id="experience">
     <p class="section__text__p1">Explore My</p>
@@ -188,7 +184,7 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    <img src="./assets/arrow.png" alt="Back to top" class="icon arrow back-to-top" onclick="document.getElementById('profile').scrollIntoView({ behavior: 'smooth' })" />
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -196,7 +192,7 @@
       <div class="projects-list-custom">
 
         <!-- Project 1 -->
-        <div class="project-row-card" style="--project-accent: #0891b2;">
+        <div class="project-row-card">
           <img src="./assets/project-1.png" alt="Analytics Copilot project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -220,18 +216,14 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/analytics-copilot'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/analytics-copilot'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/analytics-copilot', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/analytics-copilot', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-row-card" style="--project-accent: #b9a18f;">
+        <div class="project-row-card">
           <img src="./assets/project-2.png" alt="Product Analytics Toolkit project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -255,18 +247,14 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/product-analytics-toolkit'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/product-analytics-toolkit'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/product-analytics-toolkit', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/product-analytics-toolkit', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-row-card" style="--project-accent: #3f6f52;">
+        <div class="project-row-card">
           <img src="./assets/project-3.png" alt="SQL Case Studies project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -290,18 +278,14 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/sql-case-studies'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/sql-case-studies'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/sql-case-studies', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/sql-case-studies', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
         <!-- Project 4 -->
-        <div class="project-row-card" style="--project-accent: #3d5a80;">
+        <div class="project-row-card">
           <img src="./assets/project-4.png" alt="Dashboard Assistant project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -325,18 +309,14 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/dashboard-assistant'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/dashboard-assistant'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/dashboard-assistant', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/dashboard-assistant', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
         <!-- Project 5 -->
-        <div class="project-row-card" style="--project-accent: #6a5acd;">
+        <div class="project-row-card">
           <img src="./assets/project-5.png" alt="Forecasting Toolkit project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -360,18 +340,14 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/forecasting-toolkit'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/forecasting-toolkit'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/forecasting-toolkit', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/forecasting-toolkit', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
         <!-- Project 6 -->
-        <div class="project-row-card" style="--project-accent: #217346;">
+        <div class="project-row-card">
           <img src="./assets/project-6.png" alt="Revenue Performance Dashboard project" class="project-row-img" />
 
           <div class="project-row-main">
@@ -395,19 +371,15 @@
             </div>
 
             <div class="project-row-buttons">
-              <button onclick="location.href='https://github.com/DylanNguyen2111/revenue-performance-dashboard'">
-                GitHub
-              </button>
-              <button onclick="location.href='https://github.com/DylanNguyen2111/revenue-performance-dashboard'">
-                Documentation
-              </button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/revenue-performance-dashboard', '_blank', 'noopener,noreferrer')">GitHub</button>
+              <button onclick="window.open('https://github.com/DylanNguyen2111/revenue-performance-dashboard', '_blank', 'noopener,noreferrer')">Documentation</button>
             </div>
           </div>
         </div>
 
       </div>
 
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+      <a href="#contact" class="arrow-link" aria-label="Go to Contact section"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -415,11 +387,11 @@
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:examplemail@gmail.com">dylan.nguyen847@gmail.com</a></p>
+          <p><a href="mailto:dylan.nguyen847@gmail.com">dylan.nguyen847@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://www.linkedin.com/in/dylannguyenk/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/dylannguyenk/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -435,7 +407,6 @@
         </div>
       </nav>
       <p>Copyright &#169; 2026 Dylan Nguyen. All Rights Reserved.</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 
