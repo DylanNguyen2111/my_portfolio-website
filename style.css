@@ -336,6 +336,14 @@ section {
   border-radius: 2rem;
 }
 
+.text-container p {
+  width: 100%;
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .arrow {
   position: absolute;
   right: -5rem;
@@ -770,81 +778,11 @@ footer p {
 }
 
 /* ============================= */
-/* Phone */
-/* ============================= */
-
-@media screen and (max-width: 600px) {
-  #profile .section__pic-container,
-  #about .section__pic-container {
-    width: 240px !important;
-    height: 240px !important;
-    flex: 0 0 240px;
-  }
-  
-  #projects {
-    padding: 5rem 1rem 4rem;
-  }
-
-  .projects-list-custom {
-    max-width: 430px;
-  }
-
-  .project-row-card {
-    min-height: auto;
-    padding: 1rem;
-  }
-
-  .project-row-img {
-    width: 100%;
-    max-width: 100%;
-    height: 210px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .project-title-row {
-    align-items: center;
-  }
-
-  .project-title-row h2 {
-    font-size: 1.05rem;
-  }
-
-  .project-row-main p {
-    font-size: 0.84rem;
-  }
-
-  .project-row-buttons {
-    flex-direction: column;
-  }
-
-  .project-row-buttons button {
-    width: 100%;
-    max-width: none;
-  }
-  #about .about-containers {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #about .details-container {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  #about .text-container p {
-    line-height: 1.6;
-    text-align: left;
-  }
-}
-
-/* ============================= */
 /* Desktop Center Alignment */
 /* For screens wider than 1200px */
 /* ============================= */
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
   /* Center the whole profile section content */
   #profile {
     max-width: 1200px;
@@ -886,5 +824,144 @@ footer p {
   #about .about-details-container {
     flex: 1;
     max-width: 780px;
+  }
+}
+
+/* ============================= */
+/* Phone */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+  #profile .section__pic-container,
+  #about .section__pic-container {
+    width: 240px !important;
+    height: 240px !important;
+    flex: 0 0 240px !important;
+    margin: 0 auto !important;
+  }
+
+  /* ABOUT SECTION */
+  #about .section__pic-container {
+  width: 240px !important;
+  height: 240px !important;
+  flex: 0 0 240px !important;
+  margin: 0 auto !important;
+}
+
+/* ABOUT SECTION */
+#about {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 3rem 1rem !important;
+  box-sizing: border-box;
+}
+
+#about .section-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+  gap: 2rem;
+}
+
+#about .about-details-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  width: 100% !important;
+  max-width: 320px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+#about .about-containers {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  max-width: 320px !important;
+
+  margin: 0 auto 1.5rem !important;
+  padding: 0 !important;
+  gap: 1rem;
+}
+
+#about .details-container {
+  width: 100% !important;
+  max-width: 320px !important;
+
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
+
+#about .text-container {
+  width: 100% !important;
+  max-width: 320px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  /* PROJECT SECTION */
+  #projects {
+    width: auto;
+    margin: 0;
+    padding: 5rem 1rem 4rem;
+    box-sizing: border-box;
+  }
+
+  .projects-list-custom {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .project-row-card {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .project-row-img {
+    width: 100%;
+    max-width: 100%;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project-title-row {
+    align-items: center;
+  }
+
+  .project-title-row h2 {
+    font-size: 1.05rem;
+  }
+
+  .project-row-main p {
+    font-size: 0.84rem;
+  }
+
+  .project-row-buttons {
+    flex-direction: column;
+  }
+
+  .project-row-buttons button {
+    width: 100%;
+    max-width: none;
   }
 }
