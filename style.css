@@ -865,7 +865,7 @@ footer p {
   justify-content: center !important;
 
   width: 100% !important;
-  max-width: 320px !important;
+  max-width: 360px !important;
   height: auto !important;
 
   margin: 0 auto !important;
@@ -879,7 +879,7 @@ footer p {
   align-items: center !important;
 
   width: 100% !important;
-  max-width: 320px !important;
+  max-width: 360px !important;
 
   margin: 0 auto !important;
   padding: 0 !important;
@@ -892,7 +892,7 @@ footer p {
   justify-content: center !important;
 
   width: 100% !important;
-  max-width: 320px !important;
+  max-width: 360px !important;
 
   margin: 0 auto 1.5rem !important;
   padding: 0 !important;
@@ -901,7 +901,7 @@ footer p {
 
 #about .details-container {
   width: 100% !important;
-  max-width: 320px !important;
+  max-width: 360px !important;
 
   margin: 0 auto !important;
   box-sizing: border-box;
@@ -909,7 +909,7 @@ footer p {
 
 #about .text-container {
   width: 100% !important;
-  max-width: 320px !important;
+  max-width: 360px !important;
 
   margin: 0 auto !important;
   padding: 0 !important;
