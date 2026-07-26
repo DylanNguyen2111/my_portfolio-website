@@ -5,7 +5,7 @@ It showcases my background, skills, projects, resume, and contact information fo
 
 ## Live Website
 
-Coming soon.
+https://dylannguyen.work/
 
 ## About This Project
 
@@ -62,7 +62,7 @@ If you are using this repository as a reference, please also credit the original
 Clone the repository:
 
 ```bash
-git clone https://github.com/DylanNguyen2111/portfolio-website.git
+git clone https://github.com/DylanNguyen2111/my_portfolio-website.git
 ```
 
 Open the folder:
