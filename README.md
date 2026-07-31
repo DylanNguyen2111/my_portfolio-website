@@ -68,7 +68,7 @@ git clone https://github.com/DylanNguyen2111/my_portfolio-website.git
 Open the folder:
 
 ```bash
-cd portfolio-website
+cd my_portfolio-website
 ```
 
 Open `index.html` directly in your browser, or use the **Live Server** extension in VS Code.
